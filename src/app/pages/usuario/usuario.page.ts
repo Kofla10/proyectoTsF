@@ -25,7 +25,8 @@ export class UsuarioPage implements OnInit {
     this.form = this.formBuilder.group({
       'idUsuario': [this.usuario.idUsuario, [Validators.required]],
       'nombres': [this.usuario.nombres, [Validators.required]],
-      'apellido': [this.usuario.apellidos, [Validators.required]],
+     // 'SegundoNombre': [this.usuario.nombres, [Validators.required]],
+      'apellidos': [this.usuario.apellidos, [Validators.required]],
       'rol': [this.usuario.rol, [Validators.required]],
       'edad': [this.usuario.edad, [Validators.required]],
       'fechaNacimiento': [this.usuario.fechaNacimiento, [Validators.required]],
