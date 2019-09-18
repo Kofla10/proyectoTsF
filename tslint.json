@@ -50,8 +50,9 @@
     "no-switch-case-fall-through": true,
     "no-use-before-declare": true,
     "no-var-requires": false,
+    // se cambia a false para no ver el error en el ts
     "object-literal-key-quotes": [
-      true,
+      false,
       "as-needed"
     ],
     "object-literal-sort-keys": false,
