@@ -8,120 +8,144 @@
 
     <!--para iniciar el formulario reactivo-->
     <form [formGroup]="form">
+        <ion-list>
 
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Documento de Identidad</ion-label> -->
+                        <ion-input formControlName="idUsuario" type="number" placeholder="Ingrese Numero de Identificacion">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <ion-item>
-                    <ion-label stacked>Documento de Identidad</ion-label>
-                    <ion-input formControlName="idUsuario" type="number" placeholder="Ingrese Numero de Identificacion">
-                    </ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item>
+                        <!-- <ion-label stacked>Nombres: </ion-label> -->
+                        <ion-input formControlName="nombres" type="text" placeholder="Ingrese sus Nombres"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <ion-item>
-                    <ion-label stacked>Nombres: </ion-label>
-                    <ion-input formControlName="nombres" type="text" placeholder="Ingrese sus Nombres"></ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item>
+                        <!-- <ion-label stacked>Apellidos: </ion-label> -->
+                        <ion-input formControlName="apellidos" type="text" placeholder="Ingrese sus Apellidos">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <ion-item>
-                    <ion-label stacked>Apellidos: </ion-label>
-                    <ion-input formControlName="apellidos" type="text" placeholder="Ingrese sus Apellidos"></ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item>
+                        <!-- <ion-label stacked>Edad: </ion-label> -->
+                        <ion-input formControlName="edad" type="number" placeholder="Ingrese su Edad"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <!-- El rol es un select para saber que tipo de cliente se va a registrar-->
-                <ion-item>
-                    <ion-label stacked>Rol: </ion-label>
-                    <ion-select formControlName="rol"></ion-select>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <!-- El rol es un select para saber que tipo de cliente se va a registrar-->
+                    <ion-item>
+                        <!-- <ion-label stacked>Rol: </ion-label> -->
+                        <ion-select placeholder="Seleccione el Tipo de Rol" formControlName="rol"></ion-select>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <ion-item>
-                    <ion-label stacked>Edad: </ion-label>
-                    <ion-input formControlName="edad" type="number" placeholder="Ingrese su Edad"></ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item>
+                        <!-- <ion-label stacked>Fecha de Nacimiento: </ion-label> -->
+                        <ion-input formControlName="fechaNacimiento" type="date" placeholder="Ingrese la Fecha de Nacimiento">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <ion-item>
-                    <ion-label stacked>Fecha de Nacimiento: </ion-label>
-                    <ion-input formControlName="fechaNacimiento" type="date" placeholder="Ingrese la Fecha de Nacimiento">
-                    </ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item>
+                        <!-- <ion-label stacked>Correo: </ion-label> -->
+                        <ion-input formControlName="correo" type="email" placeholder="Ingrese su Correo"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <ion-item>
-                    <ion-label stacked>Correo: </ion-label>
-                    <ion-input formControlName="correo" type="email" placeholder="Ingrese su Correo"></ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item>
+                        <!-- <ion-label stacked>Direccion: </ion-label> -->
+                        <ion-input formControlName="direccion" type="text" placeholder="Ingrese la Direccion">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <ion-item>
-                    <ion-label stacked>Direccion: </ion-label>
-                    <ion-input formControlName="direccion" type="text" placeholder="Ingrese la Direccion"></ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item>
+                        <!-- <ion-label stacked>Sobre Nombre: </ion-label> -->
+                        <ion-input formControlName="apodo" type="text" placeholder="Ingrese su Apodo"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <ion-item>
-                    <ion-label stacked>Sobre Nombre: </ion-label>
-                    <ion-input formControlName="apodo" type="text" placeholder="Ingrese su Apodo"></ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item>
+                        <!-- <ion-label stacked>Telefono: </ion-label> -->
+                        <ion-input formControlName="telefono" type="number" placeholder="Ingrese el Numero de Telefono Fijo">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <ion-item>
-                    <ion-label stacked>Telefono: </ion-label>
-                    <ion-input formControlName="telefono" type="number" placeholder="Ingrese el Numero de Telefono Fijo">
-                    </ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item>
+                        <!-- <ion-label stacked>Celular: </ion-label> -->
+                        <ion-input formControlName="celular" type="number" placeholder="Ingrese el Numero de Celular">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <ion-item>
-                    <ion-label stacked>Celular: </ion-label>
-                    <ion-input formControlName="celular" type="number" placeholder="Ingrese el Numero de Celular"></ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <!--para seleccionar el tipo de negocio por ejemplo si es de comidad, ropa, accesorios-->
+                    <ion-item>
+                        <!-- <ion-label stacked>Tipo de Negocio: </ion-label> -->
+                        <ion-select placeholder="Seleccione el Tipo de Negocio" formControlName="tipoNegocio" type="text"></ion-select>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col col-12>
-                <!--para seleccionar el tipo de negocio por ejemplo si es de comidad, ropa, accesorios-->
-                <ion-item>
-                    <ion-label stacked>Tipo de Negocio: </ion-label>
-                    <ion-select formControlName="tipoNegocio" type="text"></ion-select>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item>
+                        <!-- <ion-label stacked>Celular: </ion-label> -->
+                        <ion-input formControlName="contrasenia" type="text" placeholder="Ingrese la Contraseña">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item>
+                        <!-- <ion-label stacked>Celular: </ion-label> -->
+                        <ion-input formControlName="reContrasenia" type="text" placeholder="Repita la Contraseña">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+        </ion-list>
     </form>
 </ion-content>

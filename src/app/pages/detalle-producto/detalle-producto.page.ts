@@ -18,7 +18,7 @@ import { DetalleProducto } from '../../interfaces/detalle-producto';
 export class DetalleProductoPage implements OnInit {
 
   form: FormGroup;
-  detalle: DetalleProducto;
+  detalle = new DetalleProducto();
 
   constructor(private formbuilder: FormBuilder) { }
 

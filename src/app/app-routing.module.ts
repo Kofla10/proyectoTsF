@@ -3,11 +3,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'usuario',
+    path: '', redirectTo: 'promocion',
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: 'pedido',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
@@ -40,7 +40,7 @@ const routes: Routes = [
   },
   {
     path: 'usuario',
-    loadChildren: './pages/usuario/usuario.module#UsuarioPageModule'
+    loadChildren: () => import('./pages/usuario/usuario.module').then(m => m.UsuarioPageModule)
   },
   {
     path: 'login',

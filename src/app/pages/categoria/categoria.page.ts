@@ -17,7 +17,7 @@ import { Categoria } from '../../interfaces/categoria';
 export class CategoriaPage implements OnInit {
 
   form: FormGroup;
-  categoria: Categoria;
+  categoria = new Categoria();
 
   constructor(private formbuilder: FormBuilder) { }
 

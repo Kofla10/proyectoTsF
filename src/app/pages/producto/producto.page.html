@@ -1,9 +1,84 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>producto</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>producto</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+    <form [formGroup]="form">
+        <ion-list>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Id del Producto</ion-label> -->
+                        <ion-input formControlName="idProducto" type="number" placeholder="Ingrese el ID del Producto">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese el Nombre</ion-label> -->
+                        <ion-input formControlName="nombre" type="text" placeholder="Ingrese el Nombre">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese el Precio</ion-label> -->
+                        <ion-input formControlName="precioProducto" type="number" placeholder="Ingrese el Precio">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Id de la Categoria</ion-label> -->
+                        <ion-input formControlName="idCategoria" type="number" placeholder="Ingrese el ID Categoria">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese el ID del Marketing</ion-label> -->
+                        <ion-input formControlName="idMarketing" type="number" placeholder="Ingrese el ID del Marketing">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese una Descripcion</ion-label> -->
+                        <ion-input formControlName="descripcion" type="text" placeholder="Ingrese una Descripcion">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese la Fecha de Publicacion</ion-label> -->
+                        <ion-input formControlName="fechaPublicacion" type="date" placeholder="Ingrese la Fecha de Publicacion">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+        </ion-list>
+    </form>
 </ion-content>

@@ -1,9 +1,33 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>categoria</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>categoria</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <form [formGroup]="form">
+        <ion-list>
 
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Id de la Categoria</ion-label> -->
+                        <ion-input formControlName="idCategoria" type="number" placeholder="Ingrese el ID Categoria">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Nombre de la Categoria</ion-label> -->
+                        <ion-input formControlName="nombreCategoria" type="number" placeholder="Ingrese el Nombre Categoria">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+        </ion-list>
+    </form>
 </ion-content>

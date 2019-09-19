@@ -1,9 +1,43 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>marketing</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>marketing</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <form [formGroup]="form">
+        <ion-list>
 
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>ID del Marketing</ion-label> -->
+                        <ion-input formControlName="idMarketing" type="number" placeholder="Ingrese el ID ">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese un Comentario</ion-label> -->
+                        <ion-input formControlName="comentario" type="text" placeholder="Ingrese un Comentario">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese una Calificacion</ion-label> -->
+                        <ion-input formControlName="calificacion" type="number" placeholder="Ingrese una Calificacion">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+        </ion-list>
+    </form>
 </ion-content>

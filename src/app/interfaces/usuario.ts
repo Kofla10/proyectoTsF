@@ -1,4 +1,4 @@
-export interface Usuario {
+export class Usuario {
     idUsuario?: number
     nombres?: string
     apellidos?: string
@@ -11,4 +11,6 @@ export interface Usuario {
     telefono?: number
     celular?: number
     tipoNegocio?: string
+    contrasenia?: string
+    reContrasenia?: string
 }

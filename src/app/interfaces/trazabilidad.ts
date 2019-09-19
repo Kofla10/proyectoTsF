@@ -1,4 +1,4 @@
-export interface Trazabilidad {
+export class Trazabilidad {
     idTrazabilidad?: number
     despacho?: boolean
 }

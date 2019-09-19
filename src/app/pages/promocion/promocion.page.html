@@ -1,9 +1,103 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>promocion</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>promocion</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <form [formGroup]="form">
+        <ion-list>
 
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese el ID de la Promocion</ion-label> -->
+                        <ion-input formControlName="idPromocion" type="number" placeholder="Ingrese el ID de la Promocion">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-labelIngrese Fecha de Inicio</ion-label> -->
+                        <ion-input formControlName="fechaInicio" type="date" placeholder="Ingrese Fecha de Inicio">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese Fecha de Fin</ion-label> -->
+                        <ion-input formControlName="fechaFinal" type="date" placeholder="Ingrese Fecha de Fin">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese Nombre del Producto</ion-label> -->
+                        <ion-input formControlName="nombreProducto" type="text" placeholder="Ingrese Nombre del Producto">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese el Precio del Producto en Promocion</ion-label> -->
+                        <ion-input formControlName="precioPromocion" type="number" placeholder="Ingrese el Precio del Producto en Promocion">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Id del Producto</ion-label> -->
+                        <ion-input formControlName="precioNormal" type="number" placeholder="Ingrese el Precio Normal del Producto">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese la Categoria del Producto</ion-label> -->
+                        <ion-input formControlName="idCategoria" type="number" placeholder="Ingrese la Categoria del Producto">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Ingrese el ID del Usuario</ion-label> -->
+                        <ion-input formControlName="idUsuario" type="number" placeholder="Ingrese el ID del Usuario">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <!-- <ion-label>Id del Producto</ion-label> -->
+                        <ion-input formControlName="idProducto" type="number" placeholder="Ingrese el ID del Producto">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+        </ion-list>
+    </form>
 </ion-content>

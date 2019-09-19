@@ -16,7 +16,7 @@ import { Marketing } from '../../interfaces/marketing';
 export class MarketingPage implements OnInit {
 
   form: FormGroup;
-  marketing: Marketing;
+  marketing = new Marketing();
 
   constructor(private formbuilder: FormBuilder) { }
 

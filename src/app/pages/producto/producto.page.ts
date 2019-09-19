@@ -16,11 +16,13 @@ import { Producto } from '../../interfaces/producto';
 export class ProductoPage implements OnInit {
 
   form: FormGroup;
-  producto: Producto;
+  producto = new Producto();
 
   constructor(private formbuilder: FormBuilder) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.initProducto();
+  }
 
 
   initProducto() {

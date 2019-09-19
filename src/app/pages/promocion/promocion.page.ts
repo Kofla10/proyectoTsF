@@ -16,11 +16,13 @@ import { Promocion } from '../../interfaces/promocion';
 export class PromocionPage implements OnInit {
 
   form: FormGroup;
-  promocion: Promocion;
+  promocion = new Promocion();
 
   constructor(private formbuilder: FormBuilder) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.initPromocion();
+  }
 
   initPromocion() {
     this.form = this.formbuilder.group({

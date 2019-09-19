@@ -1,4 +1,4 @@
-export interface Producto {
+export class Producto {
     idProducto?: number
     nombre?: string
     precioProducto?: number

@@ -13,7 +13,7 @@ import { Usuario } from '../../interfaces/usuario';
 export class UsuarioPage implements OnInit {
 
   form: FormGroup;
-  usuario: Usuario;
+  usuario = new Usuario();
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -25,7 +25,7 @@ export class UsuarioPage implements OnInit {
     this.form = this.formBuilder.group({
       'idUsuario': [this.usuario.idUsuario, [Validators.required]],
       'nombres': [this.usuario.nombres, [Validators.required]],
-     // 'SegundoNombre': [this.usuario.nombres, [Validators.required]],
+      // 'SegundoNombre': [this.usuario.nombres, [Validators.required]],
       'apellidos': [this.usuario.apellidos, [Validators.required]],
       'rol': [this.usuario.rol, [Validators.required]],
       'edad': [this.usuario.edad, [Validators.required]],
@@ -35,7 +35,9 @@ export class UsuarioPage implements OnInit {
       'apodo': [this.usuario.apodo, [Validators.required]],
       'telefono': [this.usuario.telefono, [Validators.required]],
       'celular': [this.usuario.celular, [Validators.required]],
-      'tipoNegocio': [this.usuario.tipoNegocio, [Validators.required]]
+      'tipoNegocio': [this.usuario.tipoNegocio, [Validators.required]],
+      'contrasenia': [this.usuario.contrasenia, [Validators.required]],
+      'reContrasenia': [this.usuario.reContrasenia, [Validators.required]]
     });
   }
 

@@ -1,4 +1,4 @@
-export interface Promocion {
+export class Promocion {
     idPromocion?: number
     fechaInicio?: Date
     fechaFinal?: Date
