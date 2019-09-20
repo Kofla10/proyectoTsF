@@ -116,12 +116,18 @@
                 </ion-col>
             </ion-row>
 
+
+            <!-- como poder mostrar el select de las optiones -->
             <ion-row>
                 <ion-col col-12>
                     <!--para seleccionar el tipo de negocio por ejemplo si es de comidad, ropa, accesorios-->
                     <ion-item>
                         <!-- <ion-label stacked>Tipo de Negocio: </ion-label> -->
-                        <ion-select placeholder="Seleccione el Tipo de Negocio" formControlName="tipoNegocio" type="text"></ion-select>
+                        <ion-select placeholder="Seleccione el Tipo de Negocio" formControlName="tipoNegocio" type="text">
+                            <!-- <ion-select-option *ngFor=" let tipo of tipoLocal" [value]="tipo"> {tipo.name} </ion-select-option>
+                            <ion-option *ngFor=" let tipo of tipoLocal" [value]="tipo"> {tipo.name} </ion-option> 
+                            <ion-select *ngFor="let tipo of tipoLocals"> {tipo.name} </ion-select>  -->
+                        </ion-select>
                     </ion-item>
                 </ion-col>
             </ion-row>

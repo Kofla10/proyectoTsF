@@ -14,8 +14,27 @@ export class UsuarioPage implements OnInit {
 
   form: FormGroup;
   usuario = new Usuario();
+  tipoUsuario: any[];
+  tipoLocals: any[];
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {
+
+    this.tipoUsuario = [
+      { id: 'admin', name: 'Administrador' },
+      { id: 'clie', name: 'Cliente' },
+      { id: 'propietario', name: 'Propietario' }
+    ];
+
+    this.tipoLocals = [
+      { id: 'super', name: 'Super Mercado' },
+      { id: 'ropa', name: 'Almacen de Ropa' },
+      { id: '', name: '' },
+      { id: '', name: '' },
+      { id: '', name: '' },
+      { id: '', name: '' },
+      { id: '', name: '' }
+    ];
+  }
 
   ngOnInit() {
     this.initUsuario();
