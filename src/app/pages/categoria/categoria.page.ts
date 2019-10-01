@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+// prueba del servicio de conexion
+import { ConexionService } from '../../services/conexion.service';
+
 // para realizar los formularios
 import {
   FormGroup,
@@ -19,7 +22,12 @@ export class CategoriaPage implements OnInit {
   form: FormGroup;
   categoria = new Categoria();
 
-  constructor(private formbuilder: FormBuilder) { }
+  constructor(
+    private formbuilder: FormBuilder,
+    private ser: ConexionService) {
+    this.ser.mostrar();
+    // this.ser.vista();
+  }
 
   ngOnInit() {
     this.initCategoria();
