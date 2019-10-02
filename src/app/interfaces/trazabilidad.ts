@@ -1,4 +1,4 @@
 export class Trazabilidad {
-    idTrazabilidad?: number
-    despacho?: boolean
+    idTrazabilidad?: number;
+    despacho?: boolean;
 }

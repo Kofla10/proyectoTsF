@@ -1,5 +1,5 @@
 export class DetalleProducto {
-    idDetalle?: number
-    descripcion?: string
-    fechaPublicacion?: Date
+    idDetalle?: number;
+    descripcion?: string;
+    fechaPublicacion?: Date;
 }

@@ -1,5 +1,5 @@
 export class Marketing {
-    idMarketing?: number
-    comentario?: string
-    calificacion?: number
+    idMarketing?: number;
+    comentario?: string;
+    calificacion?: number;
 }
