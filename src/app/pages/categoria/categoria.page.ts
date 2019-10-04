@@ -8,6 +8,9 @@ import {
 // para obtener los campos del formulario
 import { Categoria } from '../../interfaces/categoria';
 
+// importamos el servicio
+import {ConexionService} from '../../services/conexion.service';
+
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.page.html',
@@ -18,7 +21,9 @@ export class CategoriaPage implements OnInit {
   form: FormGroup;
   categoria = new Categoria();
 
-  constructor(private formbuilder: FormBuilder) {
+  constructor(private formbuilder: FormBuilder, private ser: ConexionService) {
+    this.ser.getMarketing();
+
   }
 
   ngOnInit() {
