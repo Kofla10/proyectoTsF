@@ -5,29 +5,40 @@
 </ion-header>
 
 <ion-content>
-    <form [formGroup]="form">
+    <form [formGroup]="form" (ngSubmit)="addcategoria()">
         <ion-list>
 
-            <ion-row>
+            <!-- <ion-row>
                 <ion-col col-md-12>
                     <ion-item>
-                        <!-- <ion-label>Id de la Categoria</ion-label> -->
                         <ion-input formControlName="idCategoria" type="number" placeholder="Ingrese el ID Categoria">
                         </ion-input>
                     </ion-item>
                 </ion-col>
-            </ion-row>
+            </ion-row>  -->
+
 
             <ion-row>
                 <ion-col col-md-12>
                     <ion-item>
-                        <!-- <ion-label>Nombre de la Categoria</ion-label> -->
                         <ion-input formControlName="nombreCategoria" type="text" placeholder="Ingrese el Nombre Categoria">
                         </ion-input>
                     </ion-item>
                 </ion-col>
             </ion-row>
 
+            <ion-row>
+                <ion-col col-md-12>
+                    <ion-item>
+                        <ion-input formControlName="descripcion" type="text" placeholder="Ingrese la Descripcion">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+
         </ion-list>
+        <button type="submit">Enviar</button>
+
     </form>
 </ion-content>
