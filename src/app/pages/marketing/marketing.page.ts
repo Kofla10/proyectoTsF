@@ -6,7 +6,8 @@ import {
   Validators
 } from '@angular/forms';
 // importamos la interface
-import { Marketing } from '../../interfaces/marketing';
+import { Marketing } from '../../model/marketing';
+import { ConexionService } from '../../services/conexion.service';
 
 @Component({
   selector: 'app-marketing',
@@ -18,7 +19,9 @@ export class MarketingPage implements OnInit {
   form: FormGroup;
   marketing = new Marketing();
 
-  constructor(private formbuilder: FormBuilder) { }
+  constructor(private formbuilder: FormBuilder, private ser: ConexionService) {
+    this.ser.ListMarketing();
+   }
 
   ngOnInit() {
     this.initMarketing();
@@ -26,7 +29,7 @@ export class MarketingPage implements OnInit {
 
   initMarketing() {
     this.form = this.formbuilder.group({
-      'idMarketing': [this.marketing.idMarketing, [Validators.required]],
+      // 'marketing': [this.marketing.marketing, [Validators.required]],
       'comentario': [this.marketing.comentario, [Validators.required]],
       'calificacion': [this.marketing.calificacion, [Validators.required]]
     });

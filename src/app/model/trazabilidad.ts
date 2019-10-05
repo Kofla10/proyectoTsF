@@ -1,4 +1,4 @@
 export class Trazabilidad {
-    idTrazabilidad?: number;
+    $key: string;
     despacho?: boolean;
 }

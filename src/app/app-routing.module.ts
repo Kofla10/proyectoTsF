@@ -3,12 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'categoria',
+    path: '', redirectTo: 'usuario',
     pathMatch: 'full'
-  },
-  {
-    path: 'pedido',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'categoria',

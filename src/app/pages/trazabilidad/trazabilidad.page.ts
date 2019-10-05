@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConexionService } from '../../services/conexion.service';
 
 @Component({
   selector: 'app-trazabilidad',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrazabilidadPage implements OnInit {
 
-  constructor() { }
+  constructor(private ser: ConexionService) {
+    this.ser.ListTrazabilidad();
+   }
 
   ngOnInit() {
   }

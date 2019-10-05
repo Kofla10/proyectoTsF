@@ -1,5 +1,5 @@
 export class Categoria {
-    idCategoria?: number;
+    $key: string;
     descripcion?: string;
     nombreCategoria?: string;
 

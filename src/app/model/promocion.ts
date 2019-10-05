@@ -1,17 +1,17 @@
 /* importamos las clases que tieen
 relacion con la clase promocion */
-import {Producto} from '../interfaces/producto';
-import {Usuario} from '../interfaces/usuario';
-import {Categoria} from '../interfaces/categoria';
+import { Producto } from './producto';
+import { Usuario } from './usuario';
+import { Categoria } from './categoria';
 
 export class Promocion {
-    idPromocion?: number;
+    $key: string;
     fechaInicio?: Date;
     fechaFinal?: Date;
     nomberProducto?: string;
     precioPromocion?: number;
     precioNormal?: number;
-    idCategoria?: number;
-    idUsuario?: number;
+    categoria?: number;
+    usuario?: number;
     idProducto?: number;
 }

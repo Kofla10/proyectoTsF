@@ -1,11 +1,11 @@
-/* importamos las clases que tienen 
-relacion con la clase producto*/
-import { Usuario } from '../interfaces/usuario';
+/* importamos las clases que tienen
+relacion con la clase pedido*/
+import { Usuario } from './usuario';
 import { Trazabilidad } from './trazabilidad';
 
 export class Pedido {
-    idPedido?: number;
-    idUsuario: Usuario;
+    $key: string;
+    usuario: Usuario;
     fechaPedido?: Date;
     perecio?: number;
     cantidad?: number;

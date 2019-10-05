@@ -6,8 +6,11 @@ import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 // importamos firebase
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
+// import { AngularFireModule } from 'angularfire2';
+// import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireModule} from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -15,6 +18,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+// importamos el servicio
+import { ConexionService } from './services/conexion.service';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDgp_HFU7IfpVrBu1GJuzWQbzg1FHPmicY",
@@ -38,6 +43,7 @@ export const firebaseConfig = {
     HttpClientModule
   ],
   providers: [
+    ConexionService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
@@ -45,3 +51,7 @@ export const firebaseConfig = {
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// enlace de documentacion de angular
+// https://github.com/angular/angularfire2/blob/master/docs/install-and-setup.md
+

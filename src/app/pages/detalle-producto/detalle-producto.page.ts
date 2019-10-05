@@ -6,7 +6,7 @@ import {
   FormBuilder
 } from '@angular/forms';
 // importamos la interface para obtener los campos del formulario
-import { DetalleProducto } from '../../interfaces/detalle-producto';
+import { DetalleProducto } from '../../model/detalle-producto';
 
 
 
@@ -26,7 +26,7 @@ export class DetalleProductoPage implements OnInit {
 
   initDetalle() {
     this.form = this.formbuilder.group({
-      'idDetalle': [this.detalle.idDetalle, [Validators.required]],
+      // 'idDetalle': [this.detalle.idDetalle, [Validators.required]],
       'descripcion': [this.detalle.descripcion, [Validators.required]],
       'fechapublicacion': [this.detalle.fechaPublicacion, [Validators.required]]
     });

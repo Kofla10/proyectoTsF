@@ -1,5 +1,5 @@
 export class Marketing {
-    idMarketing?: number;
+    $key: string;
     comentario?: string;
     calificacion?: number;
 }

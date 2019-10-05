@@ -1,5 +1,5 @@
 export class Usuario {
-    idUsuario?: number;
+    $key: string;
     nombres?: string;
     apellidos?: string;
     rol?: string;
@@ -12,5 +12,4 @@ export class Usuario {
     celular?: number;
     tipoNegocio?: string;
     contrasenia?: string;
-    reContrasenia?: string;
 }
