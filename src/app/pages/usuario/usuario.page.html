@@ -7,7 +7,7 @@
 <ion-content>
 
     <!--para iniciar el formulario reactivo-->
-    <form [formGroup]="form">
+    <form [formGroup]="formUsuario" (ngSubmit)="addUsuario()">
         <ion-list>
 
             <!-- <ion-row>
@@ -151,5 +151,6 @@
             </ion-row> -->
 
         </ion-list>
+        <button type="submit" class="btn btn-secondary">Agregar</button>
     </form>
 </ion-content>

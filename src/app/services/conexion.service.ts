@@ -21,7 +21,7 @@ export class ConexionService {
 
 
   // categoriaColeccion: AngularFirestoreCollection<Categoria>;
-  categoriaColeccion: AngularFirestoreCollection<any[]>;
+  categoriaColeccion: AngularFirestoreCollection<Categoria>;
   categorialist: Observable<any[]>;
   marketinglist: Observable<any[]>;
   pedidoslist: Observable<any[]>;

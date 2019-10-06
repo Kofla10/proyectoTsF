@@ -5,9 +5,10 @@
 </ion-header>
 
 <ion-content>
-    <form [formGroup]="form" (ngSubmit)="addcategoria()">
+    <form [formGroup]="formCategoria" (ngSubmit)="addcategoria()">
         <ion-list>
 
+            <!-- eliminamos el campo id porque en firebase no lo necesitamos -->
             <!-- <ion-row>
                 <ion-col col-md-12>
                     <ion-item>
@@ -16,7 +17,6 @@
                     </ion-item>
                 </ion-col>
             </ion-row>  -->
-
 
             <ion-row>
                 <ion-col col-md-12>
@@ -36,9 +36,8 @@
                 </ion-col>
             </ion-row>
 
-
         </ion-list>
-        <button type="submit">Enviar</button>
+        <button type="submit" class="btn-secondary">Enviar</button>
 
     </form>
 </ion-content>

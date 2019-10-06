@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+
 // para realizar los formularios
 import {
   FormGroup,
   FormBuilder,
   Validators
 } from '@angular/forms';
+
 // para obtener los campos del formulario
 import { Categoria } from '../../model/categoria';
+
+// import firestore
+import { AngularFirestore } from '@angular/fire/firestore';
 
 // importamos el servicio
 import { ConexionService } from '../../services/conexion.service';
@@ -18,44 +23,42 @@ import { ConexionService } from '../../services/conexion.service';
 })
 export class CategoriaPage implements OnInit {
 
-  form: FormGroup;
+  formCategoria: FormGroup;
   categoria = new Categoria();
 
+  // serv nombre que le damos al servicio
   constructor(
     private formbuilder: FormBuilder,
-    private ser: ConexionService
+    private serv: ConexionService,
+    private fire: AngularFirestore
   ) {
 
-    this.ser.listaCategoria();
+    this.serv.listaCategoria();
   }
 
   ngOnInit() {
     this.initCategoria();
+    // this.addcategoria();
   }
 
   initCategoria() {
-    this.form = this.formbuilder.group({
+    this.formCategoria = this.formbuilder.group({
       // 'idCategoria': [this.categoria.idCategoria, [Validators.required]],
       'descripcion': [this.categoria.descripcion, [Validators.required]],
       'nombreCategoria': [this.categoria.nombreCategoria, [Validators.required]]
     });
   }
 
-  // metodo para agregar una categoria a fire store
+  // metodo para agregar una categoria a la coleccion de firebase
   addcategoria() {
-
+    // validamos que el formulario sea valido
+    if (this.formCategoria.invalid) {
+      console.log('Formulario es invalido');
+    } else {
+      this.fire.collection('categoria').add(this.formCategoria.value).then(ref => {
+        console.log('El id agregado es: ', ref.id);
+      });
+    }
   }
-
-
-  //  // Add a new document with a generated id.
-  // let addDoc = db.collection('cities').add({
-  //   name: 'Tokyo',
-  //   country: 'Japan'
-  // }).then(ref => {
-  //   console.log('Added document with ID: ', ref.id);
-  // });
-
-  // https://www.youtube.com/watch?v=aAssvBo7I1U
-
 
 }

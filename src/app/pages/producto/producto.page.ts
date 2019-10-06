@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+// hacemos las importaciones para realizar el formulario reactivo
 import {
   FormGroup,
   FormBuilder,
@@ -7,6 +7,9 @@ import {
 } from '@angular/forms';
 // importamos la interface de producto
 import { Producto } from '../../model/producto';
+// importamos el fireStore
+import { AngularFirestore } from '@angular/fire/firestore';
+// importamos el servicio
 import { ConexionService } from '../../services/conexion.service';
 
 @Component({
@@ -16,10 +19,14 @@ import { ConexionService } from '../../services/conexion.service';
 })
 export class ProductoPage implements OnInit {
 
-  form: FormGroup;
+  formProducto: FormGroup;
   producto = new Producto();
 
-  constructor(private formbuilder: FormBuilder, private ser: ConexionService) {
+  constructor(
+    private formbuilder: FormBuilder,
+    private ser: ConexionService,
+    private fire: AngularFirestore
+  ) {
     this.ser.ListProductos();
   }
 
@@ -28,7 +35,7 @@ export class ProductoPage implements OnInit {
   }
 
   initProducto() {
-    this.form = this.formbuilder.group({
+    this.formProducto = this.formbuilder.group({
       // 'idProducto': [this.producto.idProducto, [Validators.required]],
       'nombre': [this.producto.nombre, [Validators.required]],
       'precioProducto': [this.producto.precioProducto, [Validators.required]],
@@ -38,4 +45,18 @@ export class ProductoPage implements OnInit {
       'fechaPublicacion': [this.producto.fechaPublicacion, [Validators.required]]
     });
   }
+
+  // para agreagar un producto a la coleccion de firebase
+  addProducto() {
+    // realizamos una validacion
+    if (this.formProducto.invalid) {
+      console.log('Error en el formulario');
+    } else {
+      this.fire.collection('producto').add(this.formProducto.value).then(ref => {
+        console.log('El id agregado es: ', ref.id);
+      });
+    }
+  }
+
 }
+

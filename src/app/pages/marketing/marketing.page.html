@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-    <form [formGroup]="form">
+    <form [formGroup]="formMarketing" (ngSubmit)="addMarketing()">
         <ion-list>
 
             <!-- <ion-row>
@@ -38,5 +38,7 @@
             </ion-row>
 
         </ion-list>
+
+        <button type="submit" class="btn btn-secondary"> Agregar</button>
     </form>
 </ion-content>
