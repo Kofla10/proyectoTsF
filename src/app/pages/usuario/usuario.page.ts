@@ -58,10 +58,10 @@ export class UsuarioPage implements OnInit {
       // 'rol': [this.usuario.rol, [Validators.required]],
       'rol': [this.usuario.rol],
       'edad': [this.usuario.edad, [Validators.required]],
-      'fechaNacimiento': [this.usuario.fechaNacimiento, [Validators.required]],
+      // 'fechaNacimiento': [this.usuario.fechaNacimiento, [Validators.required]],
       'correo': [this.usuario.correo, [Validators.required]],
       'direccion': [this.usuario.direccion, [Validators.required]],
-      'apodo': [this.usuario.apodo, [Validators.required]],
+      // 'apodo': [this.usuario.apodo, [Validators.required]],
       'telefono': [this.usuario.telefono, [Validators.required]],
       'celular': [this.usuario.celular, [Validators.required]],
       // 'tipoNegocio': [this.usuario.tipoNegocio, [Validators.required]],
@@ -80,7 +80,6 @@ export class UsuarioPage implements OnInit {
         console.log('El id agregafo es: ', ref.id);
       });
     }
-
   }
 
 }

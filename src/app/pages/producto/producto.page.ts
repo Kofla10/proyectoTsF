@@ -42,7 +42,8 @@ export class ProductoPage implements OnInit {
       'idCategoria': [this.producto.categoria, [Validators.required]],
       'idMarketing': [this.producto.marketing, [Validators.required]],
       'descripcion': [this.producto.descripcion, [Validators.required]],
-      'fechaPublicacion': [this.producto.fechaPublicacion, [Validators.required]]
+      'fechaPublicacion': [this.producto.fechaPublicacion, [Validators.required]],
+      'cantidad': [this.producto.cantidad, [Validators.required]]
     });
   }
 

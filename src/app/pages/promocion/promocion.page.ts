@@ -40,7 +40,8 @@ export class PromocionPage implements OnInit {
       'precioNormal': [this.promocion.precioNormal, [Validators.required]],
       'idCategoria': [this.promocion.categoria, [Validators.required]],
       'idUsuario': [this.promocion.usuario, [Validators.required]],
-      'idProducto': [this.promocion.idProducto, [Validators.required]]
+      'idProducto': [this.promocion.idProducto, [Validators.required]],
+      'cantidad': [this.promocion.cantidad, [Validators.required]]
     });
   }
 

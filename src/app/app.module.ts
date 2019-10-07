@@ -1,26 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
-// importamos el http
-import { HttpClientModule } from '@angular/common/http';
-
-// importamos firebase
-// import { AngularFireModule } from 'angularfire2';
-// import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireModule} from '@angular/fire';
+import { HttpClientModule } from '@angular/common/http'; // importamos el http pero ya no es necesario
+import { AngularFireModule } from '@angular/fire'; // importamos libreria de angular
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-
-
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-// importamos el servicio
-import { ConexionService } from './services/conexion.service';
+import { ConexionService } from './services/conexion.service'; // importamos el servicio para injectarlo
+import Swal from 'sweetalert2'; // importamos sweetalert2 para las alertas
 
+// el apikey para la conexion con firebase
 export const firebaseConfig = {
   apiKey: "AIzaSyDgp_HFU7IfpVrBu1GJuzWQbzg1FHPmicY",
   authDomain: "tesis-e1b37.firebaseapp.com",

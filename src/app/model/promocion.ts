@@ -13,5 +13,6 @@ export class Promocion {
     precioNormal?: number;
     categoria?: number;
     usuario?: number;
+    cantidad?: number;
     idProducto?: number;
 }

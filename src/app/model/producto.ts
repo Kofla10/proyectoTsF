@@ -10,5 +10,6 @@ export class Producto {
     categoria?: Categoria;
     marketing?: Marketing;
     descripcion?: string;
+    cantidad?: number;
     fechaPublicacion?: Date;
 }
