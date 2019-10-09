@@ -10,7 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ConexionService } from './services/conexion.service'; // importamos el servicio para injectarlo
-import Swal from 'sweetalert2'; // importamos sweetalert2 para las alertas
+// import Swal from 'sweetalert2'; // importamos sweetalert2 para las alertas
 
 // el apikey para la conexion con firebase
 export const firebaseConfig = {

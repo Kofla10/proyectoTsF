@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'usuario',
+    path: '', redirectTo: 'viewpromocioncliente',
     pathMatch: 'full'
   },
   {
@@ -35,6 +35,18 @@ const routes: Routes = [
     loadChildren: './pages/trazabilidad/trazabilidad.module#TrazabilidadPageModule'
   },
   {
+    path: 'viewproductoscliente',
+    loadChildren: './view/view-producto-cliente/view-producto-cliente.module#ViewProductoClientePageModule'
+  },
+  {
+    path: 'viewpromocioncliente',
+    loadChildren: './view/view-promocion-cliente/view-promocion-cliente.module#ViewPromocionClientePageModule'
+  },
+  {
+    path: 'viewmenu',
+    loadChildren: './view/view-menu/view-menu.module#ViewMenuPageModule'
+  },
+  {
     path: 'usuario',
     loadChildren: () => import('./pages/usuario/usuario.module').then(m => m.UsuarioPageModule)
   },
@@ -42,6 +54,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: './auth/login/login.module#LoginPageModule'
   },
+  { path: 'view-promocion-cliente', loadChildren: './view/view-promocion-cliente/view-promocion-cliente.module#ViewPromocionClientePageModule' },
+  { path: 'view-producto-cliente', loadChildren: './view/view-producto-cliente/view-producto-cliente.module#ViewProductoClientePageModule' },
+  { path: 'view-menu', loadChildren: './view/view-menu/view-menu.module#ViewMenuPageModule' },
+
 ];
 
 @NgModule({
