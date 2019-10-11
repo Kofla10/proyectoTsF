@@ -4,12 +4,12 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 // modelos de datos
-import { Trazabilidad } from '../model/trazabilidad';
 import { Categoria } from '../model/categoria';
 import { Marketing } from '../model/marketing';
 import { Pedido } from '../model/pedido';
 import { Producto } from '../model/producto';
 import { Promocion } from '../model/promocion';
+import { Trazabilidad } from '../model/trazabilidad';
 import { Usuario } from '../model/usuario';
 
 @Injectable({
@@ -20,27 +20,44 @@ export class ConexionService {
   categoria: Categoria[];
 
 
-  // categoriaColeccion: AngularFirestoreCollection<Categoria>;
+  // Creamos las colecciones de angularFireStore
   categoriaColeccion: AngularFirestoreCollection<Categoria>;
-  categorialist: Observable<any[]>;
-  marketinglist: Observable<any[]>;
-  pedidoslist: Observable<any[]>;
-  productolist: Observable<any[]>;
-  promocionlist: Observable<any[]>;
-  trazabilidadlist: Observable<any[]>;
-  usuariolist: Observable<any[]>;
+  marketingColeccion: AngularFirestoreCollection<Marketing>;
+  pedidoColeccion: AngularFirestoreCollection<Pedido>;
+  productoColeccion: AngularFirestoreCollection<Producto>;
+  promocioncoleccion: AngularFirestoreCollection<Promocion>;
+  trazabilidadColeccion: AngularFirestoreCollection<Trazabilidad>;
+  usuarioColeccion: AngularFirestoreCollection<Usuario>;
+
+  // Se crean los observables
+  categorialist: Observable<Categoria[]>;
+  marketinglist: Observable<Marketing[]>;
+  pedidoslist: Observable<Pedido[]>;
+  productolist: Observable<Producto[]>;
+  promocionlist: Observable<Promocion[]>;
+  trazabilidadlist: Observable<Trazabilidad[]>;
+  usuariolist: Observable<Usuario[]>;
 
   constructor(private firebase: AngularFirestore) { }
+
+  listadoProductos() {
+    this.productoColeccion = this.firebase.collection('producto');
+    this.productolist = this.productoColeccion.valueChanges();
+    console.log('productos 1', this.productolist);
+  }
+
+  ListProductos() {
+    this.firebase.collection('producto').valueChanges().subscribe((data: any) => {
+      this.productolist = data;
+      console.log('productos', this.productolist);
+    });
+  }
 
   listaCategoria() {
     this.firebase.collection('categoria').valueChanges().subscribe(data => {
       console.log('categoria', data);
     });
   }
-  addCategoria(categoria) {
-    this.categoriaColeccion.add(categoria);
-  }
-
   ListMarketing() {
     this.firebase.collection('marketing').valueChanges().subscribe(data => {
       console.log('marketing', data);
@@ -53,11 +70,6 @@ export class ConexionService {
     });
   }
 
-  ListProductos() {
-    this.firebase.collection('producto').valueChanges().subscribe(data => {
-      console.log('productos', data);
-    });
-  }
 
   ListPromocion() {
     this.firebase.collection('promocion').valueChanges().subscribe(data => {
