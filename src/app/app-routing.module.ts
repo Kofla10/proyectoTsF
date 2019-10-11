@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'viewproductoscliente',
+    path: '', redirectTo: 'producto',
     pathMatch: 'full'
   },
   {
@@ -57,6 +57,9 @@ const routes: Routes = [
   { path: 'view-promocion-cliente', loadChildren: './view/view-promocion-cliente/view-promocion-cliente.module#ViewPromocionClientePageModule' },
   { path: 'view-producto-cliente', loadChildren: './view/view-producto-cliente/view-producto-cliente.module#ViewProductoClientePageModule' },
   { path: 'view-menu', loadChildren: './view/view-menu/view-menu.module#ViewMenuPageModule' },
+  { path: 'view-card-promociones', loadChildren: './view/view-card-promociones/view-card-promociones.module#ViewCardPromocionesPageModule' },
+  { path: 'view-card-producto', loadChildren: './view/view-card-producto/view-card-producto.module#ViewCardProductoPageModule' },
+
 
 ];
 
